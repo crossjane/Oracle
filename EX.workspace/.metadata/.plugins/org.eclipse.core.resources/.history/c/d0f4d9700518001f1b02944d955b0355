@@ -1,0 +1,14 @@
+--1. SUB QUERY 
+--1-1. 단일 행 서브쿼리 
+--SELECT , FROM , JOIN , WHERE절에서 사용가능한 서브쿼리 
+--송강 교수보다 부임일자가 빠른 교수들의 번호, 교수이름 조회
+
+SELECT HIREDATE 
+	FROM PROFESSOR P
+	WHERE HIREDATE < (
+						SELECT HIREDATE 
+							FROM PROFESSOR P
+							WHERE PNAME = '송강';
+
+				);
+

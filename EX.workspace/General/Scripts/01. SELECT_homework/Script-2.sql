@@ -24,7 +24,7 @@ SELECT SAL 인상급여
 
 SELECT ENAME
 	 , SAL
-	 , SAL * 1.1 AS "인상 후 급여"
+	 , SAL * 1.1 + COMM AS "인상 후 급여"
 	 FROM EMP;
 	
 	
