@@ -1,0 +1,108 @@
+--1. 추가적인 조인 
+--1-1. NATURAL JOIN : 조인 조건을 명시하지 않아도 자동으로 조인될 컬럼을 추적해서 조인을 해주는 조인 
+--조인되는 컬럼은 테이블의 별칭을 사용할 수 없다. 
+--학생의 학생번호, 학생이름, 기말고사 성적 조회
+SELECT ST.SNO
+	 , ST.SNAME 
+	 , SC.CNO 
+	 , SC.RESULT
+	 FROM STUDENT ST 
+	 JOIN SCORE SC 
+	 ON ST.SNO = SC.SNO 
+	 ORDER BY ST.SNO, SC.CNO;
+
+	
+--NATURAL JOIN 사용 
+	--어떻게 자동?? 그럼 이너 조인이랑 그냥 똑같은거 아님?? 
+	
+	
+SELECT SNO 
+	 , ST.SNAME 
+	 , SC.CNO 
+	 , SC.RESULT 
+	 FROM STUDENT ST 
+	 NATURAL JOIN SCORE SC 
+	 ORDER BY SNO, SC.CNO;
+	
+	
+--NATURAL JOIN을 이용해서 학생번호, 학생이름, 해당 학생의 기말고사 평균 점수 조회
+	
+
+SELECT SNO 
+	 ,ST.SNAME 
+	 , AVG(SC.RESULT)
+	 FROM STUDENT ST 
+	 NATURAL JOIN SCORE SC
+	 GROUP BY SNO, ST.SNAME 
+	 ORDER BY SNO;
+
+SELECT SNO 
+	 , AVG(RESULT)
+	 FROM SCORE 
+	 GROUP BY SNO
+	 ORDER BY SNO;
+
+	
+--NATURAL JOIN을 이용해서 최대급여가 4000만원 이상인 부서번호, 부서이름, 최대급여 조회
+--통계함수 (MAX SUM등등)가 들어가면 무조건 GROUP BY를 써야함. 
+SELECT DNO 
+	 , D.DNAME 
+	 , MAX(E.SAL)
+	FROM EMP E
+	NATURAL JOIN DEPT D
+	GROUP BY DNO, D.DNAME
+	HAVING MAX(E.SAL) >= 4000
+	ORDER BY DNO;
+
+--NATURAL JOIN 은 테이블구조를 잘 모르는 개발자가 쿼리를 봤을때 난해하게 보일 수 있고
+--자주 사용되지 않고 조인될 컬럼이 없으면 CROSS JOIN 일어나기 때문에 자주 사용되는 조인방법은 아님.
+	
+	 
+SELECT ST.SNO 
+	 , ST.SNAME 
+	 , P.PNO 
+	 , P.PNAME 
+	 FROM STUDENT ST 
+	 NATURAL JOIN PROFESSOR P; 
+	
+	
+--1-2. JOIN ~ USING 
+--USING 절에 조인될 컬럼을 소괄호로 묵어서 명시. 조인될 컬럼은 테이블 별칭(식별자)을 사용할 수 없다.
+--학생의 학생번호, 학생이름, 해당 학생의 기말고사 성적의 평균 
+
+SELECT SNO 
+	 , ST.SNAME 
+	 , AVG(SC.RESULT)
+	 FROM STUDENT ST 
+	 JOIN SCORE SC 
+	 USING (SNO)
+	 GROUP BY SNO, ST.SNAME 
+	 ORDER BY SNO;
+	 
+--학점이 3학점인 과목의 과목번호, 과목이름, 학점, 교수번호, 교수이름조회(JOIN ~ USING 절 사용)
+
+SELECT C.CNO
+	, C.CNAME
+	, C.ST_NUM
+	, P.PNAME
+	, PNO
+	FROM COURSE C 
+	JOIN PROFESSOR P
+	--ON C.PNO = P.PNO 인데 간략하게 생략하기 위해 쓰는 것.
+	USING(PNO) 
+	WHERE C.ST_NUM = 3;
+	
+	
+--2. 다중 컬럼 IN 절 
+--여러개의 컬럼과 여러개의 데이터를 비교하고 싶을 때 사용하는 구문 
+--(컬럼1, 컬럼2) IN ((데이터 1-1, 데이터 2-1), (데이터 1-2, 데이터 2-2),...., (데이터 1-N, 데이터 2-N))
+--=> 컬럼 1 = 데이터 1-1 AND 컬럼 2 = 데이터 2-1 
+
+
+
+
+
+
+	 
+	 
+	

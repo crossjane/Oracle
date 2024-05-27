@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <items>
+	<item id="NodeList/DBNDatabaseFolder">
+		<column name="이름" visible="true" order="0" width="140"/>
+	</item>
+	<item id="NodeList/OracleSchema">
+		<column name="Name" visible="true" order="0" width="182"/>
+	</item>
+	<item id="NodeList/OracleTable">
+		<column name="Name" visible="true" order="0" width="100"/>
+		<column name="Partitioned" visible="true" order="1" width="100"/>
+		<column name="Created" visible="true" order="2" width="126"/>
+		<column name="Last Changed" visible="true" order="3" width="126"/>
+		<column name="Stat Row Count" visible="true" order="4" width="100"/>
+		<column name="Tablespace" visible="true" order="5" width="100"/>
+		<column name="Comment" visible="true" order="6" width="100"/>
+		<column name="Partition by interval kind" visible="true" order="7" width="146"/>
+		<column name="Partition interval" visible="true" order="8" width="102"/>
+	</item>
 	<item id="NodeList/OracleTableColumn">
 		<column name="컬럼명" visible="true" order="0" width="100"/>
 		<column name="#" visible="true" order="1" width="100"/>
@@ -9,8 +26,17 @@
 		<column name="디폴트" visible="true" order="5" width="100"/>
 		<column name="Comment" visible="true" order="6" width="100"/>
 	</item>
+	<item id="NodeList/OracleView">
+		<column name="View Name" visible="true" order="0" width="100"/>
+		<column name="Created" visible="true" order="1" width="100"/>
+		<column name="Last Changed" visible="true" order="2" width="100"/>
+		<column name="Comment" visible="true" order="3" width="100"/>
+	</item>
+	<item id="SchemaSelector">
+		<column name="Name" visible="true" order="0" width="182"/>
+	</item>
 	<item id="Suggestion/NodeList/OracleTableColumn">
-		<column name="컬럼명" visible="true" order="0" width="73"/>
+		<column name="컬럼명" visible="true" order="0" width="68"/>
 		<column name="#" visible="true" order="1" width="29"/>
 		<column name="Type" visible="true" order="2" width="96"/>
 		<column name="Type Mod" visible="false" order="3" width="100"/>
