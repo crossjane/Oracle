@@ -1,0 +1,16 @@
+--1. PL/SQL(Procedual Language Extension to SQL) : 오라클에서 제공하는 절차적 언어를 만들기 위한 기능 
+--												쿼리문에 변수를 선언하고 조건문이나 반복문을 사용할 수 있다. 
+--PL/SQL 에서는 결과를 출력하기 위해서 DBMS_OUTPUT.PUT_LINE 함수를 이용한다. 
+
+
+--1-1.기본적인 PL/SQL 
+DECLARE 
+	--변수의 선언은 변수명 데이터타입
+	--선언부에서 변수의 값을 할당해도 되고 안해도 된다.
+	--
+	NUM NUMBER;
+BEGIN 
+	NUM := 10; 
+	DBMS_OUTPUT.PUT_LINE(NUM);
+END;
+

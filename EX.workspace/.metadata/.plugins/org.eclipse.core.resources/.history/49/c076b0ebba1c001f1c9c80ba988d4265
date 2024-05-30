@@ -1,0 +1,27 @@
+--1. DDL(DATA DEFINITION LANGUAGE) : 데이터 정의어
+--데이터를 관리하기 위한 객체들을 조작하기 위한 명령어 
+--1-1. CREATE : 객체를 생성하기 위한 명령어 
+-- CREATE 객체명 (TABLE, USER , INDEX , SEQUENCE...) 객체의 별칭(테이블 명, 유저명, 인덱스 명, 시퀀스 명.... )
+-- 다른 테이블을 참조하여 테이블 생성 
+CREATE TABLE STUDENT_COPY2
+	 AS SELECT * FROM STUDENT;
+	
+	
+SELECT * 
+	 FROM STUDENT_COPY2;
+	
+--원하는대로 컬럼명과 개수를 지정할 수도 있다. 
+--컬럼의 타입은 SELECT 구문에서 조회해오는 데이터의 타입과 맞춰지기 때문에 바꿀 수 없다. 
+CREATE TABLE COURSE_PRFESSOR_AVGERS(COURSE_NO, COURSE_NAME, PROFESSOR_NO, PRO_NAME, AVG_RESULT)
+	AS SELECT SC.CNO 
+		 , C.CNAME 
+		 , C.PNO 
+		 , P.PNAME 
+		 , ROUND(AVG(SC.RESULT),2
+
+		 FROM COURSE C
+		 JOIN SCORE SC 
+		 ON C.CNO = SC.CNO
+		 JOIN PROFESSOR P
+		   ON C.PNO = SC.PNO 
+		   GROUP BY SC.CNO, C.CNAME, C.PNO, P.PNAME;

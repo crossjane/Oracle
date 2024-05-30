@@ -3,6 +3,16 @@
 	<item id="NodeList/DBNDatabaseFolder">
 		<column name="이름" visible="true" order="0" width="140"/>
 	</item>
+	<item id="NodeList/DBNDatabaseObject">
+		<column name="이름" visible="true" order="0" width="115"/>
+	</item>
+	<item id="NodeList/OraclePrivTable">
+		<column name="Privilege" visible="true" order="0" width="100"/>
+		<column name="Grantee" visible="true" order="1" width="100"/>
+		<column name="Grantor" visible="true" order="2" width="100"/>
+		<column name="Grantable" visible="true" order="3" width="100"/>
+		<column name="Hierarchy" visible="true" order="4" width="100"/>
+	</item>
 	<item id="NodeList/OracleSchema">
 		<column name="Name" visible="true" order="0" width="182"/>
 	</item>
@@ -25,6 +35,30 @@
 		<column name="Not Null" visible="true" order="4" width="100"/>
 		<column name="디폴트" visible="true" order="5" width="100"/>
 		<column name="Comment" visible="true" order="6" width="100"/>
+	</item>
+	<item id="NodeList/OracleTableConstraint">
+		<column name="이름" visible="true" order="0" width="100"/>
+		<column name="소유자" visible="true" order="1" width="100"/>
+		<column name="Type" visible="true" order="2" width="100"/>
+		<column name="Condition" visible="true" order="3" width="100"/>
+		<column name="Status" visible="true" order="4" width="100"/>
+	</item>
+	<item id="NodeList/OracleTableForeignKey">
+		<column name="이름" visible="true" order="0" width="100"/>
+		<column name="소유자" visible="true" order="1" width="100"/>
+		<column name="Ref Table" visible="true" order="2" width="100"/>
+		<column name="Type" visible="true" order="3" width="100"/>
+		<column name="Ref Object" visible="true" order="4" width="100"/>
+		<column name="On Delete" visible="true" order="5" width="100"/>
+		<column name="Status" visible="true" order="6" width="100"/>
+	</item>
+	<item id="NodeList/OracleTableIndex">
+		<column name="인덱스명" visible="true" order="0" width="100"/>
+		<column name="Column" visible="true" order="1" width="100"/>
+		<column name="테이블" visible="true" order="2" width="100"/>
+		<column name="인덱스 유형" visible="true" order="3" width="100"/>
+		<column name="Unique" visible="true" order="4" width="100"/>
+		<column name="Tablespace" visible="true" order="5" width="100"/>
 	</item>
 	<item id="NodeList/OracleView">
 		<column name="View Name" visible="true" order="0" width="100"/>

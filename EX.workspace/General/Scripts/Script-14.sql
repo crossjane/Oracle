@@ -1,0 +1,16 @@
+--1. DML(DATA MANIPULATION LANGUAGE) : 데이터 조작 언어 
+--데이터를 저장, 수정, 삭제 하는 언어로 INSERT INTO, UPDATE SET, DELETE FROM이 존재한다. 
+--DML은 트랜잭션을 완료하기 위해서 항상 COMMIT 이나 ROLLBACK을 동반한다.
+--1-1. INSERT INTO : 테이블에 데이터를 저장하는 명령어
+--일부 컬럼에 대한 데이터를 저장 
+INSERT INTO EMP(ENO, ENAME, JOB, HDATE) VALUES ('9997', '장길산', '설계', SYSDATE);
+COMMIT;
+
+SELECT *
+	FROM EMP;
+
+INSERT INTO EMP(ENO, ENAME, JOB, HDATE) VALUES ('9996', '임꺽정', '개발', SYSDATE);
+INSERT INTO EMP(ENO, ENAME, JOB, HDATE) VALUES ('9995', '홍길동', '회계', SYSDATE);
+INSERT INTO EMP(ENO, ENAME, JOB, HDATE) VALUES ('9994', '조병조', '지원', SYSDATE);
+INSERT INTO EMP(ENO, ENAME, JOB, HDATE) VALUES ('9993', '정도전', '경영', SYSDATE);
+ROLLBACK;

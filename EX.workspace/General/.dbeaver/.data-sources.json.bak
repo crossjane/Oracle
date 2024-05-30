@@ -9,8 +9,8 @@
 			"configuration": {
 				"host": "localhost",
 				"port": "1521",
-				"database": "ex",
-				"url": "jdbc:oracle:thin:@localhost:1521:ex",
+				"database": "xe",
+				"url": "jdbc:oracle:thin:@localhost:1521:xe",
 				"configurationType": "MANUAL",
 				"home": "C:\\app\\bitcamp\\product\\21c\\dbhomeXE",
 				"type": "dev",
