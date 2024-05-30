@@ -3689,3 +3689,1298 @@ org.jkiss.dbeaver.DBException: TABLE 'STUDENT_RECORD' not found in schema 'C##ST
 	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionProcessor$ProposalSearchJob.run(SQLCompletionProcessor.java:396)
 	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 17:45:59.188
+!MESSAGE SQL Error [907] [42000]: ORA-00907: 누락된 우괄호
+
+
+Error position: line: 6 pos: 186
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 17:45:59.188
+!MESSAGE SQL Error [907] [42000]: ORA-00907: 누락된 우괄호
+
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-05-30 17:45:59.188
+!MESSAGE Error : 907, Position : 186, SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8)
+	CNO VARCHAR2(8)
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Original SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8)
+	CNO VARCHAR2(8)
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Error Message = ORA-00907: 누락된 우괄호
+
+!STACK 0
+Error : 907, Position : 186, SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8)
+	CNO VARCHAR2(8)
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Original SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8)
+	CNO VARCHAR2(8)
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Error Message = ORA-00907: 누락된 우괄호
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 17:46:07.228
+!MESSAGE SQL Error [907] [42000]: ORA-00907: 누락된 우괄호
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 17:46:07.228
+!MESSAGE Error : 907, Position : 244, SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Original SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Error Message = ORA-00907: 누락된 우괄호
+
+!STACK 0
+Error : 907, Position : 244, SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Original SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Error Message = ORA-00907: 누락된 우괄호
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 17:47:25.493
+!MESSAGE SQL Error [907] [42000]: ORA-00907: 누락된 우괄호
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 17:47:25.493
+!MESSAGE Error : 907, Position : 228, SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0)
+	CONSTRAIN CHK_SCORE_CHK_RESULT CHECK(RESULT BETWEEN 60 AND 90)
+), Original SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0)
+	CONSTRAIN CHK_SCORE_CHK_RESULT CHECK(RESULT BETWEEN 60 AND 90)
+), Error Message = ORA-00907: 누락된 우괄호
+
+!STACK 0
+Error : 907, Position : 228, SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0)
+	CONSTRAIN CHK_SCORE_CHK_RESULT CHECK(RESULT BETWEEN 60 AND 90)
+), Original SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0)
+	CONSTRAIN CHK_SCORE_CHK_RESULT CHECK(RESULT BETWEEN 60 AND 90)
+), Error Message = ORA-00907: 누락된 우괄호
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 17:47:44.428
+!MESSAGE SQL Error [907] [42000]: ORA-00907: 누락된 우괄호
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 17:47:44.428
+!MESSAGE Error : 907, Position : 244, SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Original SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Error Message = ORA-00907: 누락된 우괄호
+
+!STACK 0
+Error : 907, Position : 244, SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Original SQL = --1) SCORE 테이블과 동일한 구조를 갖는 SCORE_CHK를 생성하고 RESULT 60이상 90이하만 입력 가능하도록 하세요.
+
+CREATE TABLE SCORE_CHK(
+	SNO VARCHAR2(8),
+	CNO VARCHAR2(8),
+	RESULT NUMBER(3, 0) CHECK (RESULT >=60, RESULT <= 90)
+), Error Message = ORA-00907: 누락된 우괄호
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 17:49:49.203
+!MESSAGE Error resolving object
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 17:49:49.203
+!MESSAGE TABLE 'EMP_DEFAULT' not found in schema 'C##STUDY'
+!STACK 0
+org.jkiss.dbeaver.DBException: TABLE 'EMP_DEFAULT' not found in schema 'C##STUDY'
+	at org.jkiss.dbeaver.ext.oracle.model.OracleStructureAssistant$2.resolveObject(OracleStructureAssistant.java:344)
+	at org.jkiss.dbeaver.ui.editors.sql.dialogs.SuggestionInformationControl$1.run(SuggestionInformationControl.java:130)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 17:52:33.009
+!MESSAGE SQL Error [2260] [42000]: ORA-02260: 테이블에는 하나의 기본 키만 가질 수 있습니다.
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 17:52:33.009
+!MESSAGE Error : 2260, Position : 314, SQL = --3) COURSE 테이블과 동일한 구조를 갖는 COURSE_CONTSRAINT 테이블을 생성하면서 CNO, CNAME을 PK로 PNO은 PROFESSOR_PK의 PNO을 참조하여
+--   FK로 설정하고 ST_NUM은 DEFAULT 2로 설정하세요.
+
+CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) PRIMARY KEY,
+	CNAME VARCHAR2(20) PRIMARY KEY, 
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2
+), Original SQL = --3) COURSE 테이블과 동일한 구조를 갖는 COURSE_CONTSRAINT 테이블을 생성하면서 CNO, CNAME을 PK로 PNO은 PROFESSOR_PK의 PNO을 참조하여
+--   FK로 설정하고 ST_NUM은 DEFAULT 2로 설정하세요.
+
+CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) PRIMARY KEY,
+	CNAME VARCHAR2(20) PRIMARY KEY, 
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2
+), Error Message = ORA-02260: 테이블에는 하나의 기본 키만 가질 수 있습니다.
+
+!STACK 0
+Error : 2260, Position : 314, SQL = --3) COURSE 테이블과 동일한 구조를 갖는 COURSE_CONTSRAINT 테이블을 생성하면서 CNO, CNAME을 PK로 PNO은 PROFESSOR_PK의 PNO을 참조하여
+--   FK로 설정하고 ST_NUM은 DEFAULT 2로 설정하세요.
+
+CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) PRIMARY KEY,
+	CNAME VARCHAR2(20) PRIMARY KEY, 
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2
+), Original SQL = --3) COURSE 테이블과 동일한 구조를 갖는 COURSE_CONTSRAINT 테이블을 생성하면서 CNO, CNAME을 PK로 PNO은 PROFESSOR_PK의 PNO을 참조하여
+--   FK로 설정하고 ST_NUM은 DEFAULT 2로 설정하세요.
+
+CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) PRIMARY KEY,
+	CNAME VARCHAR2(20) PRIMARY KEY, 
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2
+), Error Message = ORA-02260: 테이블에는 하나의 기본 키만 가질 수 있습니다.
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:03:47.019
+!MESSAGE SQL Error [942] [42000]: ORA-00942: 테이블 또는 뷰가 존재하지 않습니다
+
+
+Error position: line: 31 pos: 103
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:03:47.019
+!MESSAGE SQL Error [942] [42000]: ORA-00942: 테이블 또는 뷰가 존재하지 않습니다
+
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-05-30 18:03:47.019
+!MESSAGE Error : 942, Position : 103, SQL = CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) ,
+	CNAME VARCHAR2(20),
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2,
+	CONSTRAINT PK_PROFESSOR_PK_PNO PRIMARY KEY(CNO, CNAME)
+), Original SQL = CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) ,
+	CNAME VARCHAR2(20),
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2,
+	CONSTRAINT PK_PROFESSOR_PK_PNO PRIMARY KEY(CNO, CNAME)
+), Error Message = ORA-00942: 테이블 또는 뷰가 존재하지 않습니다
+
+!STACK 0
+Error : 942, Position : 103, SQL = CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) ,
+	CNAME VARCHAR2(20),
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2,
+	CONSTRAINT PK_PROFESSOR_PK_PNO PRIMARY KEY(CNO, CNAME)
+), Original SQL = CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) ,
+	CNAME VARCHAR2(20),
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2,
+	CONSTRAINT PK_PROFESSOR_PK_PNO PRIMARY KEY(CNO, CNAME)
+), Error Message = ORA-00942: 테이블 또는 뷰가 존재하지 않습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:03:54.732
+!MESSAGE SQL Error [2264] [42000]: ORA-02264: 기존의 제약에 사용된 이름입니다
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:03:54.732
+!MESSAGE Error : 2264, Position : 168, SQL = CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) ,
+	CNAME VARCHAR2(20),
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2,
+	CONSTRAINT PK_PROFESSOR_PK_PNO PRIMARY KEY(CNO, CNAME)
+), Original SQL = CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) ,
+	CNAME VARCHAR2(20),
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2,
+	CONSTRAINT PK_PROFESSOR_PK_PNO PRIMARY KEY(CNO, CNAME)
+), Error Message = ORA-02264: 기존의 제약에 사용된 이름입니다
+
+!STACK 0
+Error : 2264, Position : 168, SQL = CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) ,
+	CNAME VARCHAR2(20),
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2,
+	CONSTRAINT PK_PROFESSOR_PK_PNO PRIMARY KEY(CNO, CNAME)
+), Original SQL = CREATE TABLE COURSE_CONSTRAINT(
+	CNO VARCHAR2(8) ,
+	CNAME VARCHAR2(20),
+	PNO VARCHAR2(8) REFERENCES PROFESSOR_PK(PNO),
+	ST_NUM NUMBER(1, 0) DEFAULT 2,
+	CONSTRAINT PK_PROFESSOR_PK_PNO PRIMARY KEY(CNO, CNAME)
+), Error Message = ORA-02264: 기존의 제약에 사용된 이름입니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:09:11.031
+!MESSAGE SQL Error [907] [42000]: ORA-00907: 누락된 우괄호
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:09:11.031
+!MESSAGE Error : 907, Position : 842, SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER
+), Original SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER
+), Error Message = ORA-00907: 누락된 우괄호
+
+!STACK 0
+Error : 907, Position : 842, SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER
+), Original SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER
+), Error Message = ORA-00907: 누락된 우괄호
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:09:21.534
+!MESSAGE SQL Error [907] [42000]: ORA-00907: 누락된 우괄호
+
+
+Error position: line: 61 pos: 842
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:09:21.534
+!MESSAGE SQL Error [907] [42000]: ORA-00907: 누락된 우괄호
+
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-05-30 18:09:21.534
+!MESSAGE Error : 907, Position : 842, SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(0)
+), Original SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(0)
+), Error Message = ORA-00907: 누락된 우괄호
+
+!STACK 0
+Error : 907, Position : 842, SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(0)
+), Original SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(0)
+), Error Message = ORA-00907: 누락된 우괄호
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:09:44.720
+!MESSAGE SQL Error [907] [42000]: ORA-00907: 누락된 우괄호
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:09:44.720
+!MESSAGE Error : 907, Position : 842, SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(5,0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(5, 0)
+), Original SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(5,0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(5, 0)
+), Error Message = ORA-00907: 누락된 우괄호
+
+!STACK 0
+Error : 907, Position : 842, SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(5,0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(5, 0)
+), Original SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(5,0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(5, 0)
+), Error Message = ORA-00907: 누락된 우괄호
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:09:47.590
+!MESSAGE SQL Error [907] [42000]: ORA-00907: 누락된 우괄호
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:09:47.590
+!MESSAGE Error : 907, Position : 842, SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(5,0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(5, 0)
+), Original SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(5,0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(5, 0)
+), Error Message = ORA-00907: 누락된 우괄호
+
+!STACK 0
+Error : 907, Position : 842, SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(5,0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(5, 0)
+), Original SQL = ---2
+
+--1) 다음 구조를 갖는 테이블을 생성하세요.
+--PRODUCT 테이블 - PNO NUMBER PK              : 제품번호
+--                PNMAE VARCHAR2(50)          : 제품이름
+--                PRI NUMBER                  : 제품단가
+--PAYMENT 테이블 - MNO NUMBER PK              : 전표번호
+--               PDATE DATE NOT NULL         : 판매일자
+--                CNAME VARCHAR2(50) NOT NULL : 고객명
+--                TOTAL NUMBER TOTAL > 0      : 총액
+--PAYMENT_DETAIL - MNO NUMBER PK FK           : 전표번호
+--                PNO NUMBER PK FK            : 제품번호
+--                AMOUNT NUMBER NOT NULL      : 수량
+--                PRICE NUMBER NOT NULL       : 단가
+--                TOTAL_PRICE NUMBER NOT NULL TOTAL_PRICE > 0 : 금액
+
+CREATE TABLE PRODUCT (
+	PNO NUBER(5,0) PRIMARY KEY, 
+	PNAME VARCHAR2(50),
+	PRI NUMBER(5, 0)
+), Error Message = ORA-00907: 누락된 우괄호
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:09:58.425
+!MESSAGE SQL Error [906] [42000]: ORA-00906: 누락된 좌괄호
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:09:58.425
+!MESSAGE Error : 906, Position : 146, SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER, 
+	PNO NUMBER, 
+	AMOUNT NUMBER NOT NULL,
+	PRICE NUMBER NOT NULL,
+	TOTAL_PRICE NUMBER NOT NULL CHECK TOTAL_PRICE > 0
+), Original SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER, 
+	PNO NUMBER, 
+	AMOUNT NUMBER NOT NULL,
+	PRICE NUMBER NOT NULL,
+	TOTAL_PRICE NUMBER NOT NULL CHECK TOTAL_PRICE > 0
+), Error Message = ORA-00906: 누락된 좌괄호
+
+!STACK 0
+Error : 906, Position : 146, SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER, 
+	PNO NUMBER, 
+	AMOUNT NUMBER NOT NULL,
+	PRICE NUMBER NOT NULL,
+	TOTAL_PRICE NUMBER NOT NULL CHECK TOTAL_PRICE > 0
+), Original SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER, 
+	PNO NUMBER, 
+	AMOUNT NUMBER NOT NULL,
+	PRICE NUMBER NOT NULL,
+	TOTAL_PRICE NUMBER NOT NULL CHECK TOTAL_PRICE > 0
+), Error Message = ORA-00906: 누락된 좌괄호
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:10:15.306
+!MESSAGE SQL Error [906] [42000]: ORA-00906: 누락된 좌괄호
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:10:15.306
+!MESSAGE Error : 906, Position : 171, SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER(5,0), 
+	PNO NUMBER(5,0), 
+	AMOUNT NUMBER(5,0) NOT NULL,
+	PRICE NUMBER(5,0) NOT NULL,
+	TOTAL_PRICE NUMBER(5,0) NOT NULL CHECK TOTAL_PRICE > 0
+), Original SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER(5,0), 
+	PNO NUMBER(5,0), 
+	AMOUNT NUMBER(5,0) NOT NULL,
+	PRICE NUMBER(5,0) NOT NULL,
+	TOTAL_PRICE NUMBER(5,0) NOT NULL CHECK TOTAL_PRICE > 0
+), Error Message = ORA-00906: 누락된 좌괄호
+
+!STACK 0
+Error : 906, Position : 171, SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER(5,0), 
+	PNO NUMBER(5,0), 
+	AMOUNT NUMBER(5,0) NOT NULL,
+	PRICE NUMBER(5,0) NOT NULL,
+	TOTAL_PRICE NUMBER(5,0) NOT NULL CHECK TOTAL_PRICE > 0
+), Original SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER(5,0), 
+	PNO NUMBER(5,0), 
+	AMOUNT NUMBER(5,0) NOT NULL,
+	PRICE NUMBER(5,0) NOT NULL,
+	TOTAL_PRICE NUMBER(5,0) NOT NULL CHECK TOTAL_PRICE > 0
+), Error Message = ORA-00906: 누락된 좌괄호
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:10:16.886
+!MESSAGE SQL Error [906] [42000]: ORA-00906: 누락된 좌괄호
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:10:16.886
+!MESSAGE Error : 906, Position : 133, SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK TOTAL > 0,
+	), Original SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK TOTAL > 0,
+	), Error Message = ORA-00906: 누락된 좌괄호
+
+!STACK 0
+Error : 906, Position : 133, SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK TOTAL > 0,
+	), Original SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK TOTAL > 0,
+	), Error Message = ORA-00906: 누락된 좌괄호
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:10:22.195
+!MESSAGE SQL Error [904] [42000]: ORA-00904: : 부적합한 식별자
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:10:22.195
+!MESSAGE Error : 904, Position : 148, SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK (TOTAL > 0),
+	), Original SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK (TOTAL > 0),
+	), Error Message = ORA-00904: : 부적합한 식별자
+
+!STACK 0
+Error : 904, Position : 148, SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK (TOTAL > 0),
+	), Original SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK (TOTAL > 0),
+	), Error Message = ORA-00904: : 부적합한 식별자
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:11:03.424
+!MESSAGE SQL Error [904] [42000]: ORA-00904: : 부적합한 식별자
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:11:03.424
+!MESSAGE Error : 904, Position : 148, SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK (TOTAL > 0),
+	), Original SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK (TOTAL > 0),
+	), Error Message = ORA-00904: : 부적합한 식별자
+
+!STACK 0
+Error : 904, Position : 148, SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK (TOTAL > 0),
+	), Original SQL = CREATE TABLE PAYMENT(
+	MNO NUMBER(5,0) PRIMARY KEY,
+	PDATE DATE NOT NULL,
+	CNAME VARCHAR2(50) NOT NULL,
+	TOTAL NUMBER(5,0) CHECK (TOTAL > 0),
+	), Error Message = ORA-00904: : 부적합한 식별자
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-05-30 18:21:12.184
+!MESSAGE SQL Error [905] [42000]: ORA-00905: 누락된 키워드
+
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-05-30 18:21:12.184
+!MESSAGE Error : 905, Position : 306, SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER(5,0), 
+	PNO NUMBER(5,0), 
+	AMOUNT NUMBER(5,0) NOT NULL,
+	PRICE NUMBER(5,0) NOT NULL,
+	TOTAL_PRICE NUMBER(5,0) NOT NULL CHECK (TOTAL_PRICE > 0),
+	CONSTRAINT PK_PAYMENT_DETAIL_PK PRIMARY KEY (MNO, PNO),
+	CONSTRAINT FK_PAYMENT_DETAIL_FK FOREIGN KEY (MNO, PNO)
+), Original SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER(5,0), 
+	PNO NUMBER(5,0), 
+	AMOUNT NUMBER(5,0) NOT NULL,
+	PRICE NUMBER(5,0) NOT NULL,
+	TOTAL_PRICE NUMBER(5,0) NOT NULL CHECK (TOTAL_PRICE > 0),
+	CONSTRAINT PK_PAYMENT_DETAIL_PK PRIMARY KEY (MNO, PNO),
+	CONSTRAINT FK_PAYMENT_DETAIL_FK FOREIGN KEY (MNO, PNO)
+), Error Message = ORA-00905: 누락된 키워드
+
+!STACK 0
+Error : 905, Position : 306, SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER(5,0), 
+	PNO NUMBER(5,0), 
+	AMOUNT NUMBER(5,0) NOT NULL,
+	PRICE NUMBER(5,0) NOT NULL,
+	TOTAL_PRICE NUMBER(5,0) NOT NULL CHECK (TOTAL_PRICE > 0),
+	CONSTRAINT PK_PAYMENT_DETAIL_PK PRIMARY KEY (MNO, PNO),
+	CONSTRAINT FK_PAYMENT_DETAIL_FK FOREIGN KEY (MNO, PNO)
+), Original SQL = CREATE TABLE PAYMENT_DETAIL(
+	MNO NUMBER(5,0), 
+	PNO NUMBER(5,0), 
+	AMOUNT NUMBER(5,0) NOT NULL,
+	PRICE NUMBER(5,0) NOT NULL,
+	TOTAL_PRICE NUMBER(5,0) NOT NULL CHECK (TOTAL_PRICE > 0),
+	CONSTRAINT PK_PAYMENT_DETAIL_PK PRIMARY KEY (MNO, PNO),
+	CONSTRAINT FK_PAYMENT_DETAIL_FK FOREIGN KEY (MNO, PNO)
+), Error Message = ORA-00905: 누락된 키워드
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
