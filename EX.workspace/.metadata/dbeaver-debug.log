@@ -13154,3 +13154,1202 @@ ORA-06550: 줄 13, 열3:PL/SQL: Statement ignored
 	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 2024-05-30 16:24:59.189 - Execution context opened (localstudy; SQLEditor <12. PL_SQL.sql>; 14)
+2024-05-30 17:09:32.715 - SQL Error [6550] [65000]: ORA-06550: 줄 19, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   begin function pragma procedure subtype type <식별자>
+   <큰 따옴표로 구분된 식별자> current cursor delete
+   exists prior
+
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [6550] [65000]: ORA-06550: 줄 19, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   begin function pragma procedure subtype type <식별자>
+   <큰 따옴표로 구분된 식별자> current cursor delete
+   exists prior
+
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.sql.SQLException: ORA-06550: 줄 19, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   begin function pragma procedure subtype type <식별자>
+   <큰 따옴표로 구분된 식별자> current cursor delete
+   exists prior
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+Caused by: Error : 6550, Position : 0, SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+
+
+
+
+, Original SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+
+
+
+
+, Error Message = ORA-06550: 줄 19, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   begin function pragma procedure subtype type <식별자>
+   <큰 따옴표로 구분된 식별자> current cursor delete
+   exists prior
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	... 26 more
+2024-05-30 17:14:58.766 - SQL Error [6550] [65000]: ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [6550] [65000]: ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.sql.SQLException: ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+Caused by: Error : 6550, Position : 0, SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+
+END
+
+
+
+
+
+, Original SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+
+END
+
+
+
+
+
+, Error Message = ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	... 26 more
+2024-05-30 17:14:59.087 - SQL Error [900] [42000]: ORA-00900: SQL 문이 부적합합니다
+
+
+Error position: line: 307
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [900] [42000]: ORA-00900: SQL 문이 부적합합니다
+
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00900: SQL 문이 부적합합니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+Caused by: Error : 900, Position : 0, SQL = DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO), Original SQL = DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO), Error Message = ORA-00900: SQL 문이 부적합합니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	... 26 more
+2024-05-30 17:15:23.928 - SQL Error [6550] [65000]: ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [6550] [65000]: ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.sql.SQLException: ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+Caused by: Error : 6550, Position : 0, SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNAME);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE.CNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE.RESULT);
+
+END
+
+
+
+
+
+, Original SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNAME);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE.CNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE.RESULT);
+
+END
+
+
+
+
+
+, Error Message = ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	... 26 more
+2024-05-30 17:15:41.013 - SQL Error [6550] [65000]: ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+
+Error position: line: 307
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [6550] [65000]: ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.sql.SQLException: ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+Caused by: Error : 6550, Position : 0, SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE_ROW
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNAME);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.CNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.RESULT);
+
+END
+
+
+
+
+
+, Original SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE_ROW
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNAME);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.CNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.RESULT);
+
+END
+
+
+
+
+
+, Error Message = ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	... 26 more
+2024-05-30 17:15:45.041 - SQL Error [6550] [65000]: ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [6550] [65000]: ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.sql.SQLException: ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+Caused by: Error : 6550, Position : 0, SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE_ROW
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNAME);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.CNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.RESULT);
+
+END
+
+
+
+
+
+, Original SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE_ROW
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNAME);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.CNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.RESULT);
+
+END
+
+
+
+
+
+, Error Message = ORA-06550: 줄 43, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	... 26 more
+2024-05-30 17:15:51.607 - SQL Error [6550] [65000]: ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [6550] [65000]: ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.sql.SQLException: ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+Caused by: Error : 6550, Position : 0, SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE_ROW
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNAME);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.CNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.RESULT);
+
+END
+
+
+
+
+
+, Original SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE_ROW
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNAME);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.CNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.RESULT);
+
+END
+
+
+
+
+
+, Error Message = ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	... 26 more
+2024-05-30 17:15:52.980 - SQL Error [6550] [65000]: ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+
+Error position: line: 307
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [6550] [65000]: ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.sql.SQLException: ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+Caused by: Error : 6550, Position : 0, SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE_ROW
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNAME);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.CNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.RESULT);
+
+END
+
+
+
+
+
+, Original SQL = --4. 레코드 : 다양한 타입의 변수들을 모아놓은 자료형.
+DECLARE 
+	--레코드의 선언 
+	TYPE STUDENT_REC IS RECORD(
+	--기본데이터 타입과 참조형 데이터 타입들을 모두 사용할 수 있다.
+		SNO VARCHAR2(8) NOT NULL := '111111',
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR NUMBER (1) NOT NULL DEFAULT 1,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE,
+		JOIN_DATE DATE DEFAULT SYSDATE, 
+		SCORE_ROW SCORE%ROWTYPE
+		);
+
+	--위에 선언한 레코드 자료형으로 변수를 하나선언해야 실행부에서 레코드를 사용할 수 있다.
+	--레코드 자료형의 변수 선언 
+	STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO := '222222';
+	STUDENTREC.SNAME := '이순신';
+
+--	STUDENTREC.SCORE.SNO := '915301';
+--	STUDENTREC.SCORE.CNO := '1211';
+--	STUDENTREC.SCORE.RESULT := '100'; 
+
+	SELECT * INTO STUDENTREC.SCORE_ROW
+		FROM SCORE 
+		WHERE SNO = '915301'
+		AND CNO = '1211';
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SNAME);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.CNO);
+	DBMS_OUTPUT.PUT_LINE(STUDENTREC.SCORE_ROW.RESULT);
+
+END
+
+
+
+
+
+, Error Message = ORA-06550: 줄 42, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   ; <식별자> <큰 따옴표로 구분된 식별자>
+심볼이 ";" 계속하기 위하여 "end-of-file"로 치환되었습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	... 26 more
+2024-05-30 17:16:45.789 - Error while analyzing query text: --4-1. 레코드를 통한 데이터 저장 
+CREATE TABLE 
+
+
+
+
+
+
+
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.stm.STMTreeNode.getNodeName()" because "node" is null
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.collectIdentifier(SQLQueryModelRecognizer.java:420)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.collectQualifiedName(SQLQueryModelRecognizer.java:519)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.collectTableName(SQLQueryModelRecognizer.java:500)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.traverseForIdentifiers(SQLQueryModelRecognizer.java:185)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:127)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob.doWork(SQLBackgroundParsingJob.java:519)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob$1.run(SQLBackgroundParsingJob.java:89)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-05-30 17:18:53.795 - SQL Error [6550] [65000]: ORA-06550: 줄 16, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   begin function pragma procedure subtype type <식별자>
+   <큰 따옴표로 구분된 식별자> current cursor delete
+   exists prior
+
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [6550] [65000]: ORA-06550: 줄 16, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   begin function pragma procedure subtype type <식별자>
+   <큰 따옴표로 구분된 식별자> current cursor delete
+   exists prior
+
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.sql.SQLException: ORA-06550: 줄 16, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   begin function pragma procedure subtype type <식별자>
+   <큰 따옴표로 구분된 식별자> current cursor delete
+   exists prior
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+Caused by: Error : 6550, Position : 0, SQL = DECLARE 
+	TYPE STUDENT_REC IS RECORD(
+		SNO STUDENT.SNO%TYPE, 
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR STUDENT.SYEAR%TYPE,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE
+	);
+
+STUDENTREC STUDENT_REC;
+
+
+
+
+, Original SQL = DECLARE 
+	TYPE STUDENT_REC IS RECORD(
+		SNO STUDENT.SNO%TYPE, 
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR STUDENT.SYEAR%TYPE,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE
+	);
+
+STUDENTREC STUDENT_REC;
+
+
+
+
+, Error Message = ORA-06550: 줄 16, 열0:PLS-00103: 심볼 "end-of-file"를 만났습니다 다음 중 하나가 기대될 때:
+   begin function pragma procedure subtype type <식별자>
+   <큰 따옴표로 구분된 식별자> current cursor delete
+   exists prior
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	... 26 more
+2024-05-30 17:22:32.691 - Error resolving object
+org.jkiss.dbeaver.DBException: TABLE 'STUDENT_RECORD' not found in schema 'C##STUDY'
+	at org.jkiss.dbeaver.ext.oracle.model.OracleStructureAssistant$2.resolveObject(OracleStructureAssistant.java:344)
+	at org.jkiss.dbeaver.ui.editors.sql.dialogs.SuggestionInformationControl$1.run(SuggestionInformationControl.java:130)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-05-30 17:22:41.202 - SQL Error [6550] [65000]: ORA-06550: 줄 13, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 14, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 15, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 16, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 17, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 18, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [6550] [65000]: ORA-06550: 줄 13, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 14, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 15, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 16, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 17, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 18, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:614)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:505)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:524)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:976)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4155)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:123)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:121)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5148)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.sql.SQLException: ORA-06550: 줄 13, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 14, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 15, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 16, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 17, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 18, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1335)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1041)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:443)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:533)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:176)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:1305)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1877)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1520)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:2557)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:2506)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:334)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:330)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+Caused by: Error : 6550, Position : 258, SQL = DECLARE 
+	TYPE STUDENT_REC IS RECORD(
+		SNO STUDENT.SNO%TYPE, 
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR STUDENT.SYEAR%TYPE,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE
+	);
+
+STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO = '3333333';
+	STUDENTREC.SNAME = '이순신';
+	STUDENTREC.SEX = '남';
+	STUDENTREC.SYEAR = 1;
+	STUDENTREC.MAJOR = '컴공';
+	STUDENTREC.AVR = 4.0;
+
+--데이터 저장 
+INSERT INTO STUDENT_RECORD
+VALUES STUDENTREC;
+
+END;, Original SQL = DECLARE 
+	TYPE STUDENT_REC IS RECORD(
+		SNO STUDENT.SNO%TYPE, 
+		SNAME STUDENT.SNAME%TYPE,
+		SEX STUDENT.SEX%TYPE,
+		SYEAR STUDENT.SYEAR%TYPE,
+		MAJOR STUDENT.MAJOR%TYPE,
+		AVR STUDENT.AVR%TYPE
+	);
+
+STUDENTREC STUDENT_REC;
+BEGIN 
+	STUDENTREC.SNO = '3333333';
+	STUDENTREC.SNAME = '이순신';
+	STUDENTREC.SEX = '남';
+	STUDENTREC.SYEAR = 1;
+	STUDENTREC.MAJOR = '컴공';
+	STUDENTREC.AVR = 4.0;
+
+--데이터 저장 
+INSERT INTO STUDENT_RECORD
+VALUES STUDENTREC;
+
+END;, Error Message = ORA-06550: 줄 13, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 14, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 15, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 16, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 17, 열19:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+ORA-06550: 줄 18, 열17:PLS-00103: 심볼 "="를 만났습니다 다음 중 하나가 기대될 때:
+   := . ( @ % ;
+심볼이 ":= 계속하기 위해 "=" 전에 삽입되었음
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	... 26 more
+2024-05-30 17:25:12.341 - org.jkiss.dbeaver.DBException: TABLE 'STUDENT_RECORD' not found in schema 'C##STUDY'
+	at org.jkiss.dbeaver.ext.oracle.model.OracleStructureAssistant$2.resolveObject(OracleStructureAssistant.java:344)
+	at org.jkiss.dbeaver.model.sql.SQLSearchUtils.findObjectByPath(SQLSearchUtils.java:176)
+	at org.jkiss.dbeaver.model.sql.SQLSearchUtils.findObjectByFQN(SQLSearchUtils.java:105)
+	at org.jkiss.dbeaver.model.sql.SQLSearchUtils.findObjectByFQN(SQLSearchUtils.java:65)
+	at org.jkiss.dbeaver.model.sql.completion.SQLCompletionAnalyzer.getTableFromAlias(SQLCompletionAnalyzer.java:1005)
+	at org.jkiss.dbeaver.model.sql.completion.SQLCompletionAnalyzer.runAnalyzer(SQLCompletionAnalyzer.java:328)
+	at org.jkiss.dbeaver.model.sql.completion.SQLCompletionAnalyzer.runAnalyzer(SQLCompletionAnalyzer.java:120)
+	at org.jkiss.dbeaver.model.sql.completion.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:104)
+	at org.jkiss.dbeaver.model.sql.completion.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:1)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionProcessor$ProposalSearchJob.run(SQLCompletionProcessor.java:396)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-05-30 17:25:12.356 - org.jkiss.dbeaver.DBException: TABLE 'STUDENT_RECORD' not found in schema 'C##STUDY'
+	at org.jkiss.dbeaver.ext.oracle.model.OracleStructureAssistant$2.resolveObject(OracleStructureAssistant.java:344)
+	at org.jkiss.dbeaver.model.sql.SQLSearchUtils.findObjectByPath(SQLSearchUtils.java:176)
+	at org.jkiss.dbeaver.model.sql.SQLSearchUtils.findObjectByFQN(SQLSearchUtils.java:122)
+	at org.jkiss.dbeaver.model.sql.SQLSearchUtils.findObjectByFQN(SQLSearchUtils.java:65)
+	at org.jkiss.dbeaver.model.sql.completion.SQLCompletionAnalyzer.getTableFromAlias(SQLCompletionAnalyzer.java:1005)
+	at org.jkiss.dbeaver.model.sql.completion.SQLCompletionAnalyzer.runAnalyzer(SQLCompletionAnalyzer.java:328)
+	at org.jkiss.dbeaver.model.sql.completion.SQLCompletionAnalyzer.runAnalyzer(SQLCompletionAnalyzer.java:120)
+	at org.jkiss.dbeaver.model.sql.completion.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:104)
+	at org.jkiss.dbeaver.model.sql.completion.SQLCompletionAnalyzer.run(SQLCompletionAnalyzer.java:1)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:194)
+	at org.jkiss.dbeaver.ui.editors.sql.syntax.SQLCompletionProcessor$ProposalSearchJob.run(SQLCompletionProcessor.java:396)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
