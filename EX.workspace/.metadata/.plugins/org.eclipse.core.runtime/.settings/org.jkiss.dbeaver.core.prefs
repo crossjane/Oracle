@@ -7,5 +7,5 @@ resultset.presentation.active=spreadsheet
 sample.database.canceled=true
 script.sql.delimiter.blank=ONLY_SEPARATOR
 tipOfTheDayInitializer.notFirstRun=true
-ui.auto.update.check.time=1716942452861
+ui.auto.update.check.time=1717374589015
 ui.show.tip.of.the.day.on.startup=true

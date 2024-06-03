@@ -1,7 +1,0 @@
---1. SUB QUERY 
---1-1. 단일 행 서브쿼리 
---SELECT , FROM , JOIN , WHERE절에서 사용가능한 서브쿼리 
-
-SELECT HIREDATE 
-	FROM PROFESSOR P
-	WHERE PNAME = '송강';
